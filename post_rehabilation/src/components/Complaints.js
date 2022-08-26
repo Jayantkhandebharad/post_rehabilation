@@ -178,8 +178,8 @@ export default function ListOfUsers() {
           <TableRow> 
             <StyledTableCell >Complaint Id</StyledTableCell>
             <StyledTableCell align="right">User Id</StyledTableCell>
-            <StyledTableCell align="right">Visited</StyledTableCell>
-            <StyledTableCell align="right">Stage</StyledTableCell>
+            <StyledTableCell align="right">Description</StyledTableCell>
+            <StyledTableCell align="right">Status</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -196,8 +196,8 @@ export default function ListOfUsers() {
                 {row.compId}
               </StyledTableCell>
               <StyledTableCell align="right">{row.userId}</StyledTableCell>
-              <StyledTableCell align="right">{row.visited}</StyledTableCell>
-              <StyledTableCell align="right">{row.CIincrementStatus}</StyledTableCell>
+              <StyledTableCell align="right">{row.description}</StyledTableCell>
+              <StyledTableCell align="right">{row.status}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

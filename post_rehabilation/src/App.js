@@ -10,6 +10,7 @@ import UserDetails from "./components/UserDetails";
 import Complaints from "./components/Complaints";
 
 import Ivr from "./components/IVR/Ivr";
+import Zc_complaint from "./components/ZC/ListOfComplaints";
 
 import Avt from "./components/AVT/Avt";
 import User_details_avt from "./components/AVT/User_details_avt";
@@ -17,6 +18,7 @@ import ListOfUsers_avt_scheduled from "./components/AVT/Avt_scheduled";
 import User_details_avt_scheduled from "./components/AVT/User_details_avt_scheduled";
 
 import CompTrack from "./components/User/CompTrack";
+
 
 import Zc from "./components/ZC/Zc";
 import UserDetails_zc from "./components/ZC/UserDetails_zc";
@@ -77,6 +79,7 @@ function App() {
           <Routes>
             <Route exact path="/zc" element={<Zc />}></Route> 
             <Route exact path="/userDetails_zc/:id" element={<UserDetails_zc/>}></Route> 
+            <Route exact path="/zc_complaint" element={<Zc_complaint/>}></Route>
             <Route exact path="/Logout" element={<Logout />} /> 
           </Routes>   
           <Footer />
