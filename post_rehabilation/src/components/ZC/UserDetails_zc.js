@@ -184,14 +184,7 @@ const [rating,setRating]=useState("");
     return(
       <>
       <DrawerAppBar/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      
         <div className="UserDetails">
-        
-            {/* <h1>This is UserDetails</h1> */}
             <BasicCard userId={params.id}/>
             
             <Demo style={{width:"95%",borderRadius:"2px",marginLeft:"3%",boxShadow: "2px 2px 4px -1px rgba(0,0,0,0.75)"}}>
@@ -200,7 +193,7 @@ const [rating,setRating]=useState("");
             >
                 <Typography variant={"h4"}>Session details</Typography>
             </Grid>
-           {FormCard()}
+           <FormCard/>
           </Demo>
         </div>
         <div style={{width:"95%",boxShadow:"5px 5px 5px 5px #E8E8E8",marginLeft:"50px"}}>
@@ -252,12 +245,15 @@ const [rating,setRating]=useState("");
             style={{ marginTop: "20px", backgroundColor: "green" }}
             variant="contained"
             color="primary"
-           
           >
             Submit
           </Button>
         </form>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         </>
     )
 }

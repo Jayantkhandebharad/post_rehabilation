@@ -62,7 +62,7 @@ function FormCard(){
                 <Grid container spacing={2}>
                 <Grid item xs={5}>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                      FeedBack : {item.feedback}
+                      Report : {item.feedback}
                     </Typography>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                       Progress :{item.progress}

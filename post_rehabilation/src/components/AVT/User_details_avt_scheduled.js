@@ -186,15 +186,15 @@ const Item = styled(Paper)(({ theme }) => ({
 function BasicCard(props) {
   const navigate = useNavigate();
   const params = useParams();
-  const send_to_zc=(userId)=>{
+  const send_to_zc =()=> {
     fetch("http://127.0.0.1:8000/CIincrementStatus", {
         method: "post",
         body: JSON.stringify({
-            "userId":userId,
+            "userId":params.id,
           })
     })
+    alert("Send to ZC");
     navigate('/avt_scheduled');
-    
   }
   console.log(props);
 
@@ -212,7 +212,7 @@ function BasicCard(props) {
         </Grid>
         <Grid item xs={4} style={{display:"flex",justifyContent:"flex-end"}}>
         <CardActions>
-            <Button variant="contained"  onClick={send_to_zc(props.data.userId)}  >Send to ZC</Button>
+            <Button variant="contained"  onClick={send_to_zc}  >Send to ZC</Button>
         </CardActions>
         </Grid>
         </Grid>
@@ -285,7 +285,7 @@ const User_details_avt_scheduled = ()=>{
             <BasicCard data={data}/>
             
             <div >
-        {FormCard()}
+          <FormCard/>
 
             </div>
         </div>

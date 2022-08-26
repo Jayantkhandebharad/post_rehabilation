@@ -56,14 +56,11 @@ export default function ListOfUsers() {
   return (
     <>
     <DrawerAppBar/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <div className='UpdateUser'>
-    <SearchBar
-      value={data}
-      onChange={(newValue) => setData(newValue)}
-      placeholder="Search using name"
-      onRequestSearch={() => search(data)}
-      style={{borderRadius: "0px"}}
-    />
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
@@ -77,13 +74,13 @@ export default function ListOfUsers() {
         </TableHead>
         <TableBody>
           {rows
-          .filter(row => row.Name.includes(data))
+        //   .filter(row => row.Name.includes(data))
           .map((row) => (
             <StyledTableRow 
               style={{ cursor: "pointer" }}
               key={row.Name}
               onClick={() => {
-               navigate(`/userDetails/${row.userId}`);
+               navigate(`/userDetails_zc/${row.userId}`);
               // <UserDetails id={row.userId}/>
                }}
             >

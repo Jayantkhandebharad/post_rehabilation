@@ -14,7 +14,7 @@ import Zc_complaint from "./components/ZC/ListOfComplaints";
 
 import Avt from "./components/AVT/Avt";
 import User_details_avt from "./components/AVT/User_details_avt";
-import ListOfUsers_avt_scheduled from "./components/AVT/Avt_scheduled";
+import ListOfUsers from "./components/AVT/Avt_scheduled";
 import User_details_avt_scheduled from "./components/AVT/User_details_avt_scheduled";
 
 import CompTrack from "./components/User/CompTrack";
@@ -65,7 +65,7 @@ function App() {
           <Routes>
             <Route exact path="/avt" element={<Avt/>}></Route>
             <Route exact path="/user_details_avt/:id" element={<User_details_avt/>}/> 
-            <Route exact path="/avt_scheduled" element={<ListOfUsers_avt_scheduled/>}></Route>
+            <Route exact path="/avt_scheduled" element={<ListOfUsers/>}></Route>
             <Route exact path="/user_details_avt_scheduled/:id" element={<User_details_avt_scheduled/>}></Route>
             <Route exact path="/Logout" element={<Logout />} /> 
           </Routes>   

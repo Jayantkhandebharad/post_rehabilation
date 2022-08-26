@@ -24,7 +24,7 @@
 .UserDetails{
   width: auto;
   margin-top: 80px;
-  height: max-content;
+  height: 100vh;
 }
 
 /* ************************ Sign in ************************ */

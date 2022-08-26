@@ -51,8 +51,9 @@ export default function ListOfUsers() {
         }).then(res=>res.json())
           .then(data=>setRows(data))
           .catch(err=>console.log(err))
+          console.log(rows);
   },[])
-  console.log(rows);
+  
   return (
     <>
     <DrawerAppBar1/>
@@ -77,7 +78,7 @@ export default function ListOfUsers() {
         </TableHead>
         <TableBody>
           {rows
-          .filter(row => row.Name.includes(data))
+          // .filter(row => row.Name.includes(data))
           .map((row) => (
             <StyledTableRow 
               style={{ cursor: "pointer" }}
