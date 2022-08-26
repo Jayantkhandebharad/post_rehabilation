@@ -45,7 +45,7 @@ export default function ListOfUsers() {
     fetch("http://127.0.0.1:8000/CIgetUser",{
               method:"post",
               body:JSON.stringify({
-                "schedule":"false",
+                "schedule":"true",
                 "stage":"1"
               })
         }).then(res=>res.json())
@@ -83,7 +83,7 @@ export default function ListOfUsers() {
               style={{ cursor: "pointer" }}
               key={row.Name}
               onClick={() => {
-               navigate(`/user_details_avt/${row.userId}`);
+               navigate(`/user_details_avt_scheduled/${row.userId}`);
               // <UserDetails id={row.userId}/>
                }}
             >

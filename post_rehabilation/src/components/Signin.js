@@ -60,13 +60,13 @@ const useForm = (callback, validate) => {
   };
   const handleCase =(props)=> {
       switch(props){
-        case "Government Official":
+        case "Doctor":
           return 1;
-        case "Organization":
+        case "AVT":
           return 2;
-        case "Tahsildar":
+        case "ZC":
           return 3;
-        case "Panchayat":
+        case "Final":
           return 4;
       }
   }
@@ -76,15 +76,26 @@ const useForm = (callback, validate) => {
     setErrors(validate(values).errors);
     setIsSubmitting(true);
   };
-
+  function routeHelp(route){
+    switch(route){
+      case 1:
+        return '/doctor';
+      case 2:
+        return '/avt';
+      case 3:
+        return '/zc';
+    }
+  }
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       if (values.username == "admin") {
         if (values.password == "admin") {
           localStorage.setItem("username", values.username);
-          localStorage.setItem("role", handleCase(values.role));
+          const role = handleCase(values.role);
+
+          localStorage.setItem("role", role);
           alert("Signed In Successfully!");
-          window.location.href = "/";
+          window.location.href = routeHelp(role);
         }
         else {
           setErrors({ password: "Wrong Password" });
@@ -106,7 +117,7 @@ const Signin = ({ submitForm }) => {
     submitForm,
     validate
   );
- const Types = ["Government Official","Organization","Tahsildar","Panchayat"]
+ const Types = ["Doctor","AVT","ZC","Final"]
   return (
     <div className="container-signup">
       <div className="img">
