@@ -9,10 +9,14 @@ import ListOfPatients from "./components/ListOfPatients";
 import UserDetails from "./components/UserDetails";
 import Complaints from "./components/Complaints";
 
+import Ivr from "./components/IVR/Ivr";
+
 import Avt from "./components/AVT/Avt";
 import User_details_avt from "./components/AVT/User_details_avt";
 import ListOfUsers_avt_scheduled from "./components/AVT/Avt_scheduled";
 import User_details_avt_scheduled from "./components/AVT/User_details_avt_scheduled";
+
+import CompTrack from "./components/User/CompTrack";
 
 import Zc from "./components/ZC/Zc";
 import UserDetails_zc from "./components/ZC/UserDetails_zc";
@@ -41,6 +45,7 @@ function App() {
     return (
       <>        
           <Routes>
+           
             <Route exact path="/doctor" element={<ListOfPatients />}></Route> 
             <Route exact path="/addPatient" element={<AddPatient />}></Route> 
             <Route exact path="/listOfPatients" element={<ListOfPatients />}></Route>  
@@ -77,6 +82,30 @@ function App() {
           <Footer />
         </>
     );
+  }
+  else if(loggedIn && role == 4){
+    return (
+      <>        
+          <Routes>
+            <Route exact path="/Ivr" element={<Ivr />} />
+            <Route exact path="/Logout" element={<Logout />} />  
+          </Routes>   
+          <Footer />
+        </>
+    );
+
+  }
+  else if(loggedIn && role == 5){
+    return (
+      <>        
+          <Routes>
+            <Route exact path="/compTrack" element={<CompTrack />}></Route> 
+            <Route exact path="/Logout" element={<Logout />} />  
+          </Routes>   
+          <Footer />
+        </>
+    );
+
   }
   else {
     return (

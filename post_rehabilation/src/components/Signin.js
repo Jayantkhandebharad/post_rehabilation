@@ -66,8 +66,10 @@ const useForm = (callback, validate) => {
           return 2;
         case "ZC":
           return 3;
-        case "Final":
+        case "Customer Care":
           return 4;
+        case "User":
+          return 5;
       }
   }
   const handleSubmit = (e) => {
@@ -84,6 +86,10 @@ const useForm = (callback, validate) => {
         return '/avt';
       case 3:
         return '/zc';
+      case 4:
+        return '/Ivr';
+      case 5:
+        return '/compTrack';
     }
   }
   useEffect(() => {
@@ -117,7 +123,7 @@ const Signin = ({ submitForm }) => {
     submitForm,
     validate
   );
- const Types = ["Doctor","AVT","ZC","Final"]
+ const Types = ["Doctor","AVT","ZC","Customer Care","User"]
   return (
     <div className="container-signup">
       <div className="img">

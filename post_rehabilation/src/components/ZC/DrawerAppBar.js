@@ -51,6 +51,8 @@ function DrawerAppBar(props) {
     switch(link){
         case "List of User":
             return "zc";
+        case "Complaints":
+          return "zc_complaint";
         case "Logout":
           return "Logout";
         
